@@ -5,9 +5,8 @@ int main()
     printf("Enter a number:");
     scanf("%d",&x);
 
-    while(x!=0)
-    {
-        x=x/10;
+    for(int i=x;i!=0;i=i/10)
+    {       
         count++;
     }
 

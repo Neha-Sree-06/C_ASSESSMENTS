@@ -7,9 +7,8 @@ int main()
 start:
 
     
-    if(i%2==1)  {
-
-
+    if(i%2==1)  
+    {
         a=i/10;
         b=i%10;
         s=a+b;
