@@ -1,37 +1,25 @@
 #include <stdio.h>
 
-int main() 
-{
-    int num1, num2, num3, max, lcm, i;
+int main() {
+    int num1, num2, max, lcm;
 
-    printf("Enter three numbers: ");
-    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
 
-    if (num1 > num2) 
-    {
-        if (num1 > num3)
-            max = num1;
-        else
-            max = num3;
-    } 
-    else 
-    {
-        if (num2 > num3)
-            max = num2;
-        else
-            max = num3;
-    }
+    if(num1 > num2)
+        max = num1;
+    else
+        max = num2;
 
-    for (i = max; ; i++) 
-    {
-        if (i % num1 == 0 && i % num2 == 0 && i % num3 == 0) 
-        {
-            lcm = i;
+    lcm = max;
+
+    while(1) {
+        if(lcm % num1 == 0 && lcm % num2 == 0) {
+            printf("%d", lcm);
             break;
         }
+        lcm++;
     }
-
-    printf("%d", lcm);
 
     return 0;
 }
