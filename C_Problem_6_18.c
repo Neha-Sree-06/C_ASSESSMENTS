@@ -2,7 +2,7 @@
 
 int main() 
 {
-    int num, lastTwo, i, isPrime = 1;
+    int num, lastTwo, isPrime = 1;
 
     printf("Enter a number: ");
     scanf("%d", &num);
@@ -15,13 +15,15 @@ int main()
     } 
     else 
     {
-        for (i = 2; i <= lastTwo / 2; i++) 
+        int i=2;
+        while(i <= lastTwo / 2) 
         {
             if (lastTwo % i == 0) 
             {
                 isPrime = 0;
                 break;
             }
+            i++;
         }
     }
 

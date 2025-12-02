@@ -9,17 +9,18 @@ int main()
 
     temp= num;
 
-    for (int i=temp; i >= 10; i = i / 10)     
+    while(temp>=10)     
     {
-        last = i % 10;
-        secondLast = (i/ 10) % 10;
+        last=temp%10;
+        secondLast=(temp/10)%10;
 
-        int twoDigit = secondLast * 10 + last;
+        int twoDigit=secondLast*10+last;
 
-        if (twoDigit % 2 == 1) 
+        if (twoDigit%2==1) 
         {
             count++;
         }
+        temp/=10;
     }
 
     printf("%d\n", count);

@@ -7,25 +7,30 @@ int main()
     printf("Enter a number: ");
     scanf("%d", &num);
 
+
     if (num <= 1) 
     {
         isPrime = 0;
     } 
     else 
     {
-        for (i = 2; i <= num / 2; i++) 
+        int i=2;
+        while(i <= num/2) 
         {
             if (num % i == 0) 
             {
                 isPrime = 0;
                 break;
             }
+            i++;
         }
     }
 
-    for(int i=num;i!=0;i/=10)
+    int j=num;
+    while(j!=0)
     {
-        sum += i% 10;
+        sum += j% 10;
+        j/=10;
     }
 
     if (isPrime == 1 && sum == 14)

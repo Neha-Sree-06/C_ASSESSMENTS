@@ -2,26 +2,28 @@
 
 int main() 
 {
-    int num, lastTwo, i, isPrime = 1;
+    int num, mid, i, isPrime = 1;
 
-    printf("Enter a number: ");
+    printf("Enter a 4-digit number: ");
     scanf("%d", &num);
 
-    lastTwo = num % 100; 
+    mid = (num / 10) % 100;
 
-    if (lastTwo <= 1) 
+    if (mid <= 1) 
     {
         isPrime = 0;
     } 
     else 
     {
-        for (i = 2; i <= lastTwo / 2; i++) 
+        i=2;
+        while(i <= mid / 2) 
         {
-            if (lastTwo % i == 0) 
+            if (mid % i == 0) 
             {
                 isPrime = 0;
                 break;
             }
+            i++;
         }
     }
 

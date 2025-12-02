@@ -13,7 +13,6 @@ int main()
         if (digit % 2 == 1)
             count++;
     }
-
     printf("%d", count);
 
     return 0;

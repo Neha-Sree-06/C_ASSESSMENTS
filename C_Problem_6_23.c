@@ -7,12 +7,14 @@ int main()
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    for (int i=num; i> 0; i /= 10) 
+    while(num>0) 
     {
-        digit = i % 10;
+        digit=num%10;
 
         if (digit == 1 || digit == 4 || digit == 9)
             count++;
+        
+        num/=10;
     }
 
     printf("%d\n", count);

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int num, mid, i, isPrime = 1;
 
     printf("Enter a 4-digit number: ");
@@ -8,11 +9,16 @@ int main() {
 
     mid = (num / 10) % 100;
 
-    if (mid <= 1) {
+    if (mid <= 1) 
+    {
         isPrime = 0;
-    } else {
-        for (i = 2; i <= mid / 2; i++) {
-            if (mid % i == 0) {
+    } 
+    else 
+    {
+        for (i = 2; i <= mid / 2; i++) 
+        {
+            if (mid % i == 0) 
+            {
                 isPrime = 0;
                 break;
             }

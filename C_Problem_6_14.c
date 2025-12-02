@@ -10,12 +10,13 @@ int main()
     temp=n;
     last=n%10;  
 
-    for(int i=temp;i>=10;i=i/10)
+    while(temp>=10)
     {
         pow=pow*10;
+        temp/=10;
     }
 
-    first=temp/pow;               
+    first=n/pow;               
     middle=(n%pow)/10;   
     result=last*pow+middle*10+first;
     printf("%d\n", result);

@@ -2,33 +2,33 @@
 
 int main() 
 {
-    int num, lastTwo, i, isPrime = 1;
+    int num, i, isPrime = 1;
 
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    lastTwo = num % 100; 
-
-    if (lastTwo <= 1) 
+    if (num <= 1) 
     {
         isPrime = 0;
     } 
     else 
     {
-        for (i = 2; i <= lastTwo / 2; i++) 
+        int i=2;
+        while(i <= num / 2) 
         {
-            if (lastTwo % i == 0) 
+            if (num % i == 0) 
             {
                 isPrime = 0;
                 break;
             }
+            i++;
         }
     }
 
     if (isPrime == 1)
-        printf("Prime\n");
+        printf("%d is prime\n", num);
     else
-        printf("Not Prime\n");
+        printf("%d is not prime\n", num);
 
     return 0;
 }
