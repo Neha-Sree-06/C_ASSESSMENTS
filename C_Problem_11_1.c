@@ -6,7 +6,8 @@ int main()
     printf("Enter a number x:");
     scanf("%d",&x);
     printf("Number:%d",x);
-    int *p=&x;
+    int *p;
+    p=&x;
     *p=20;
     printf("\nNumber after change:%d",x);
     return 0;
